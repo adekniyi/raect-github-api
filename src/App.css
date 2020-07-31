@@ -13,6 +13,7 @@
     margin-top: -75px;
     /* padding-bottom: 30px; */
     margin-bottom: 20px;
+    border: 5px solid rgb(22, 141, 141);
 }
 
 .dataStyle {
@@ -22,6 +23,7 @@
     align-items: center;
     margin: 0 auto;
     margin-bottom: 7px;
+    margin-top: 20px;
 }
 
 .formStyle {
@@ -67,4 +69,6 @@ button {
     padding-bottom: 30px;
     margin-top: 50px;
     color: white;
+    border-radius: 10px;
+    border: 5px solid rgb(22, 141, 141);
 }
