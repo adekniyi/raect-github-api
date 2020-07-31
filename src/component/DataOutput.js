@@ -6,7 +6,7 @@ function DataOutput(props) {
     const [users, setUsers] = useState({})
 
 
-    const user = props.user === "" ? "john" : props.user
+    const user = props.user === "" ? "adekniyi" : props.user
     const client_id = "Iv1.6d532b6c69dc31ae"
     const client_secret = "b0e3c5671b49920301d88513a7e98ba9e988d24c"
     const proxy = 'https://cors-anywhere.herokuapp.com/'
