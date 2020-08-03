@@ -17,18 +17,18 @@ function DataOutput(props) {
             .then((res) => res.json())
             .then((data) => {
                 setUsers(data)
-            }).catch((err) => console.log(err))
+            }).catch((err) => console.log(`cannot fetch data ${err}`))
     }, [users])
     const { avatar_url, followers, login, name, public_repos, location } = users
     return ( <
         div className = "dataOutput" >
         <
-        img src = { avatar_url }
+        img src = { avatar_url === undefined ? logo : avatar_url }
         className = "App-logo"
         alt = "logo" / > <
         h3 style = {
             { paddingBottom: "12px" }
-        } > { login } < /h3> 
+        } > { login === undefined ? "can't fetch name" : login } < /h3> 
 
         <
         h5 style = {
@@ -38,7 +38,7 @@ function DataOutput(props) {
         <
         p style = {
             { paddingBottom: "12px" }
-        } > { name } < /p> 
+        } > { name === undefined ? "can't fetch name" : name } < /p> 
 
         <
         h5 style = {
@@ -48,7 +48,7 @@ function DataOutput(props) {
         <
         p style = {
             { paddingBottom: "12px" }
-        } > { location } < /p> 
+        } > { location === undefined ? "can't fetch location" : location } < /p> 
 
         <
         h5 style = {
@@ -58,7 +58,7 @@ function DataOutput(props) {
         <
         p style = {
             { paddingBottom: "12px" }
-        } > { public_repos } < /p> 
+        } > { public_repos === undefined ? "can't fetch public repos" : public_repos } < /p> 
 
         <
         h5 style = {
@@ -66,7 +66,7 @@ function DataOutput(props) {
         } > Number of followers < /h5> 
 
         <
-        p > { followers } < /p> 
+        p > { followers === undefined ? "can't fetch followers" : followers } < /p> 
 
         <
         /
